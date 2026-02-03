@@ -1,10 +1,12 @@
 [package]
-name = "btc-payment-gateway"
+name = "btc_payment_gateway"
 version = "0.1.0"
-edition = "2.1.0"
+edition = "2024_07"
 
 [dependencies]
-starknet = ">=2.3.0"
-snforge_std = { version = ">=2.3.0", dev-dependencies = true }
+starknet = ">=2.0.0"
+# Using v0.14.0 - known secp256k1 conflict exists but doesn't affect our usage
+# We only use token, access, and security packages, not account/preset packages
+openzeppelin = { git = "https://github.com/OpenZeppelin/cairo-contracts.git", tag = "v0.14.0" }
 
 [[target.starknet-contract]]
