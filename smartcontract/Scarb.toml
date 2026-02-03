@@ -1,0 +1,10 @@
+[package]
+name = "btc-payment-gateway"
+version = "0.1.0"
+edition = "2.1.0"
+
+[dependencies]
+starknet = ">=2.3.0"
+snforge_std = { version = ">=2.3.0", dev-dependencies = true }
+
+[[target.starknet-contract]]
